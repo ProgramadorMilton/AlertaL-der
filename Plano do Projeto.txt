@@ -1,0 +1,13 @@
+Projeto da automação do Louvor
+
+1) Construção do código enviando um aviso para o líder do dia via WhatApp.
+	Limitações:
+		A) Abrir o vs.code.
+		B) Só manda um aviso, ainda não envia as músicas.
+
+2) Salvar esse Alfa no GIT.
+3) Enviar as músicas do dia junto do aviso.
+4) Fazer isso automaticamente sem precisar abrir o VS Code.
+	Talvez precise de um servidor.
+5) Desenvolver uma aplicação onde eu consiga coletar repertórios dos mebros do louvor para um banco de dados e também quem o envio-ou (talvez outros dados também como links).
+6) Montar uma aplicação que as pessoas consigam visualizar tudo isso.
