@@ -6,6 +6,7 @@ os seus deveres e quais serão os louvores tocados.
 O código utiliza uma planilha em Excel para armazenar essas informações.
 
 --------------- Pré-requisitos ---------------
+
 Para utilizar esse código, você precisará ter instalado em sua máquina:
 
 Python 3.x
@@ -13,6 +14,7 @@ pandas
 pywhatkit
 
 --------------- Como utilizar ---------------
+
 Clone este repositório em sua máquina.
 Certifique-se de ter instalado os pré-requisitos listados acima.
 Abra o arquivo "AlertaAutomacao.xlsx" e preencha as informações referentes aos líderes de louvor e repertório das músicas.
@@ -22,6 +24,7 @@ O programa irá acessar a planilha e obter as informações necessárias para en
 Aguarde a execução do programa.
 
 --------------- Observações ---------------
+
 Certifique-se de que o arquivo "AlertaAutomacao.xlsx" esteja no mesmo diretório do arquivo "alerta_lideranca_louvor.py".
 Caso os líderes de louvor mudem ou as músicas do repertório sejam alteradas, basta atualizar a planilha e executar o programa novamente. 
 As mensagens serão enviadas com as informações atualizadas.
