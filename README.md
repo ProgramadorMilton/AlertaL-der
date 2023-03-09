@@ -31,6 +31,7 @@ As mensagens serão enviadas com as informações atualizadas.
 É necessário que o número de telefone dos líderes de louvor esteja cadastrado em seu celular e que eles estejam utilizando o WhatsApp.
 
 --------------- Limitações ---------------
+
 O código foi desenvolvido levando em consideração a estrutura da planilha "AlertaAutomacao.xlsx" fornecida. 
 Alterações na estrutura da planilha podem afetar o funcionamento do código.
 O código não verifica se o número de telefone cadastrado é válido ou se o WhatsApp do destinatário está funcionando corretamente.
