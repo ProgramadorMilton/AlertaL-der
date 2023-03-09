@@ -164,7 +164,7 @@ repertorioQuintaCinco = [
 hoje = datetime.datetime.now()
 
 # Verifica se hoje é uma segunda-feira ou sexta-feira
-if hoje.weekday() == 3 or hoje.weekday() == 4:
+if hoje.weekday() == 0 or hoje.weekday() == 4:
     # Obtém o número de dias no mês atual
     numero_de_dias = calendar.monthrange(hoje.year, hoje.month)[1]
 
@@ -222,7 +222,7 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
     print(semana_atual)
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da primeira semana do mês
-    if hoje.weekday() == 3 and semana_atual == 1:
+    if hoje.weekday() == 0 and semana_atual == 1:
         mensagem = mensagens_segunda[0]
         nomeDoDia = nomeQuintaPrimeira
         indiceDoLider = nomes.index(nomeDoDia)
@@ -235,7 +235,7 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da segunda semana do mês
-    elif hoje.weekday() == 3 and semana_atual == 2:
+    elif hoje.weekday() == 0 and semana_atual == 2:
         mensagem = mensagens_segunda[1]
         nomeDoDia = nomeQuintaSegunda
         # Faz com que item de uma lista1 enterja com o item equivalente da lista2 colocando ele em uma Variável.
@@ -249,7 +249,7 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da terceira semana do mês
-    elif hoje.weekday() == 3 and semana_atual == 3:
+    elif hoje.weekday() == 0 and semana_atual == 3:
         mensagem = mensagens_segunda[2]
         nomeDoDia = nomeQuintaTerceira
         indiceDoLider = nomes.index(nomeDoDia)
@@ -262,7 +262,7 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da quarta semana do mês
-    elif hoje.weekday() == 3 and semana_atual == 4:
+    elif hoje.weekday() == 0 and semana_atual == 4:
         mensagem = mensagens_segunda[3]
         nomeDoDia = nomeQuintaQuarta
         indiceDoLider = nomes.index(nomeDoDia)
@@ -275,7 +275,7 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da quinta semana do mês
-    elif hoje.weekday() == 3 and semana_atual == 5:
+    elif hoje.weekday() == 0 and semana_atual == 5:
         mensagem = mensagens_segunda[4]
         nomeDoDia = nomeQuintaQuinta
         indiceDoLider = nomes.index(nomeDoDia)
@@ -293,5 +293,5 @@ if hoje.weekday() == 3 or hoje.weekday() == 4:
 
     # Se houver uma mensagem para enviar, encontra o número de telefone do destinatário e envia a mensagem
     if mensagem is not None:
-        pywhatkit.sendwhatmsg(whatsapp, mensagem, 17, 23)
+        pywhatkit.sendwhatmsg(whatsapp, mensagem, 09, 30)
         print(f"Mensagem enviada para {whatsapp}")
