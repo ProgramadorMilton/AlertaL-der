@@ -88,50 +88,133 @@ numeros = [
     numeroMilton,
     numeroMotta,
 ]
+# Repertórios dos Domingos
+repertorioDomingoUm = [
+    df.loc[36, "coluna 2"],
+    df.loc[37, "coluna 2"],
+    df.loc[38, "coluna 2"],
+    df.loc[39, "coluna 2"],
+]
+
+repertorioDomingoDois = [
+    df.loc[36, "coluna 3"],
+    df.loc[37, "coluna 3"],
+    df.loc[38, "coluna 3"],
+    df.loc[39, "coluna 3"],
+]
+
+repertorioDomingoTres = [
+    df.loc[36, "coluna 4"],
+    df.loc[37, "coluna 4"],
+    df.loc[38, "coluna 4"],
+    df.loc[39, "coluna 4"],
+]
+
+repertorioDomingoQuatro = [
+    df.loc[36, "coluna 5"],
+    df.loc[37, "coluna 5"],
+    df.loc[38, "coluna 5"],
+    df.loc[39, "coluna 5"],
+]
+
+repertorioDomingoCinco = [
+    df.loc[36, "coluna 6"],
+    df.loc[37, "coluna 6"],
+    df.loc[38, "coluna 6"],
+    df.loc[39, "coluna 6"],
+]
+
+# Repertórios das Quintas-Feiras
+repertorioQuintaUm = [
+    df.loc[14, "coluna 2"],
+    df.loc[15, "coluna 2"],
+    df.loc[16, "coluna 2"],
+    df.loc[17, "coluna 2"],
+]
+
+repertorioQuintaDois = [
+    df.loc[14, "coluna 3"],
+    df.loc[15, "coluna 3"],
+    df.loc[16, "coluna 3"],
+    df.loc[17, "coluna 3"],
+]
+
+repertorioQuintaTres = [
+    df.loc[14, "coluna 4"],
+    df.loc[15, "coluna 4"],
+    df.loc[16, "coluna 4"],
+    df.loc[17, "coluna 4"],
+]
+
+repertorioQuintaQuatro = [
+    df.loc[14, "coluna 5"],
+    df.loc[15, "coluna 5"],
+    df.loc[16, "coluna 5"],
+    df.loc[17, "coluna 5"],
+]
+
+repertorioQuintaCinco = [
+    df.loc[14, "coluna 6"],
+    df.loc[15, "coluna 6"],
+    df.loc[16, "coluna 6"],
+    df.loc[17, "coluna 6"],
+]
 
 # Obtém a data atual
 hoje = datetime.datetime.now()
 
 # Verifica se hoje é uma segunda-feira ou sexta-feira
-if hoje.weekday() == 0 or hoje.weekday() == 4:
+if hoje.weekday() == 3 or hoje.weekday() == 4:
     # Obtém o número de dias no mês atual
     numero_de_dias = calendar.monthrange(hoje.year, hoje.month)[1]
 
     # Define as mensagens para cada segunda-feira e sexta-feira do mês
+    # Join é um método usado para concatenar uma lista em Strings para a mensagem poder ser enviada.
     mensagens_segunda = [
         "Fala aí "
         + nomeQuintaPrimeira
-        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioQuintaUm),
         "Fala aí "
         + nomeQuintaSegunda
-        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioQuintaDois),
         "Fala aí "
         + nomeQuintaTerceira
-        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioQuintaTres),
         "Fala aí "
         + nomeQuintaQuarta
-        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioQuintaQuatro),
         "Fala aí "
         + nomeQuintaQuinta
-        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *quinta-feira* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioQuintaCinco),
     ]
 
+    # Join é um método usado para concatenar uma lista em Strings para a mensagem poder ser enviada.
     mensagens_sexta = [
         "Fala aí "
         + nomeDomingoPrimeiro
-        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioDomingoCinco),
         "Fala aí "
         + nomeDomingoSegundo
-        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioDomingoDois),
         "Fala aí "
         + nomeDomingoTerceiro
-        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioDomingoTres),
         "Fala aí "
         + nomeDomingoQuarto
-        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioDomingoQuatro),
         "Fala aí "
         + nomeDomingoQuinto
-        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas",
+        + ", passando para lembrar que *domingo* você é o (a) líder do dia.\nNão se esqueça:\n• Dos tons das músicas\n• Quem irá solar as músicas\n"
+        + "\n".join(repertorioDomingoCinco),
     ]
 
     # Obtém o número da semana atual no mês (1-5)
@@ -139,7 +222,7 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
     print(semana_atual)
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da primeira semana do mês
-    if hoje.weekday() == 0 and semana_atual == 1:
+    if hoje.weekday() == 3 and semana_atual == 1:
         mensagem = mensagens_segunda[0]
         nomeDoDia = nomeQuintaPrimeira
         indiceDoLider = nomes.index(nomeDoDia)
@@ -152,7 +235,7 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da segunda semana do mês
-    elif hoje.weekday() == 0 and semana_atual == 2:
+    elif hoje.weekday() == 3 and semana_atual == 2:
         mensagem = mensagens_segunda[1]
         nomeDoDia = nomeQuintaSegunda
         # Faz com que item de uma lista1 enterja com o item equivalente da lista2 colocando ele em uma Variável.
@@ -166,7 +249,7 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da terceira semana do mês
-    elif hoje.weekday() == 0 and semana_atual == 3:
+    elif hoje.weekday() == 3 and semana_atual == 3:
         mensagem = mensagens_segunda[2]
         nomeDoDia = nomeQuintaTerceira
         indiceDoLider = nomes.index(nomeDoDia)
@@ -179,7 +262,7 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da quarta semana do mês
-    elif hoje.weekday() == 0 and semana_atual == 4:
+    elif hoje.weekday() == 3 and semana_atual == 4:
         mensagem = mensagens_segunda[3]
         nomeDoDia = nomeQuintaQuarta
         indiceDoLider = nomes.index(nomeDoDia)
@@ -192,7 +275,7 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
         whatsapp = numeros[indiceDoLider]
 
     # Verifica se hoje é uma segunda-feira ou sexta-feira da quinta semana do mês
-    elif hoje.weekday() == 0 and semana_atual == 5:
+    elif hoje.weekday() == 3 and semana_atual == 5:
         mensagem = mensagens_segunda[4]
         nomeDoDia = nomeQuintaQuinta
         indiceDoLider = nomes.index(nomeDoDia)
@@ -210,5 +293,5 @@ if hoje.weekday() == 0 or hoje.weekday() == 4:
 
     # Se houver uma mensagem para enviar, encontra o número de telefone do destinatário e envia a mensagem
     if mensagem is not None:
-        pywhatkit.sendwhatmsg(whatsapp, mensagem, 21, 11)
+        pywhatkit.sendwhatmsg(whatsapp, mensagem, 17, 23)
         print(f"Mensagem enviada para {whatsapp}")
